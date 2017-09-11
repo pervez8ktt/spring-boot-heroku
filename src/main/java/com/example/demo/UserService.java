@@ -18,13 +18,13 @@ public class UserService {
 	        return userRecords;  
 	    }  
 	    public User getUser(String id){  
-	        return userRepository.findOne(id);  
+	        return userRepository.findOne(Long.parseLong(id));
 	    }  
 	    public void addUser(User userRecord){  
 	        userRepository.save(userRecord);  
 	    }  
 	    public void delete(String id){  
-	        userRepository.delete(id);  
+	        userRepository.delete(Long.parseLong(id));  
 	    }  
 	
 }
